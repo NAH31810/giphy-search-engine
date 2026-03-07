@@ -30,4 +30,21 @@ body {
   background: transparent;
   color: white;
   text-align: center;
+}
+.header-container H1 {
+  font-family: "Bitcount Prop Double Ink", system-ui;
+  font-size: 6rem; /*Adjust font size for better visibility*/
+  color: #00ffcc;
+  letter-spacing: 8px; /*Adjust letter spacing for better readability*/
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.5), 4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
+  /* bobbing and glowing animation */
+  animation: float-and-glow 4s infinite ease-in-out;
+}
+@media (max-width: 320px) {
+  .header-container H1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
 }/*# sourceMappingURL=style.css.map */
