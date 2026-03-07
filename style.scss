@@ -6,3 +6,19 @@ $accent-color: #00ffcc;
 $ocean-gradient: linear-gradient(to bottom, #00c6ff, #0072ff);
 $mobile-width: 320px;
 $title-font: "Bitcount Prop Double Ink", system-ui;
+
+/* reset and body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background: $ocean-gradient;
+    min-height: 100vh;
+     background-attachment: fixed; 
+      overflow-x: hidden; 
+}
