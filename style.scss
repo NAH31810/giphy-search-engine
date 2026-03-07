@@ -80,3 +80,48 @@ H1 {
     }
 }
 /* search area styles and Gif grid */
+.search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+
+    @media (max-width: $mobile-width) {
+        flex-direction: column;
+        width:100%;
+    }
+
+    input {
+        padding: 12px 15px  12px 45px; /* Adjust padding with more left-room for icon */
+        width: 305px;
+        font-size: 1.1rem; /* Increase font size for better visibility */
+        font-weight: 800; /* Make text bolder for better readability */
+        color: #2c3e50;
+
+        background-color: rgba(255, 218, 185, 0.9); /* Light peach background with some transparency */
+        border: 2px solid #f2c199; /* Soft peach border for a cohesive look */
+        border-radius: 50px;
+        outline:none
+            /* The "stand out" effect  */
+            box-shadow: 0  8px 32px rgba(31, 38, 135, 0.2), /* Outer glow */
+                        inset 0 0 5px rgba(255, 218, 185, 0.5); /* Inner glow */
+                        back-drop-filter: blur(4px); /* Add a subtle blur for a glass effect */
+                        transition: all 0.3s ease; /* Smooth transition for focus and hover effects */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        background-color: $accent-color;
+        color: white;
+        cursor: pointer;
+        border-radius: 0 4px 4px 0;
+
+        &:hover {
+            background-color: lighten($accent-color, 10%);
+            text-shadow: 0 0 10px $accent-color;
+        }
+    }
+}

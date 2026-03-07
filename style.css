@@ -69,4 +69,40 @@ body {
   text-shadow: 0 0 10px #00ffcc;
 }
 
-/* search area styles and Gif grid *//*# sourceMappingURL=style.css.map */
+/* search area styles and Gif grid */
+.search-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 10px;
+}
+@media (max-width: 320px) {
+  .search-area {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.search-area input {
+  padding: 12px 15px 12px 45px; /* Adjust padding with more left-room for icon */
+  width: 305px;
+  font-size: 1.1rem; /* Increase font size for better visibility */
+  font-weight: 800; /* Make text bolder for better readability */
+  color: #2c3e50;
+  background-color: rgba(255, 218, 185, 0.9); /* Light peach background with some transparency */
+  border-radius: 4px 0 0 4px;
+  max-width: 80%;
+}
+.search-area button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #00ffcc;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+.search-area button:hover {
+  background-color: rgb(51, 255, 214.2);
+  text-shadow: 0 0 10px #00ffcc;
+}/*# sourceMappingURL=style.css.map */
