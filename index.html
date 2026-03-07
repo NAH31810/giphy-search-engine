@@ -10,20 +10,53 @@
     />
     <!-- Google Font -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://fav.farm/🪼" />
   </head>
 
   <body id="top">
-     <header class="header-container">
-   <div class="logo">
-     <h1>GIPHY SEARCH</h1>
-   </div>
-    <nav class="nav-links">
-  <ul>
-   <li><a href="#home">Home</a></li>
-   <li><a href="#trending">Trending</a></li>
-   <li><a href="#about">About</a></li>
- </ul>
-    </nav>
+    <header class="header-container">
+      <div class="logo">
+        <h1>GIPHY SEARCH</h1>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <section class="search-area">
+        <input type="text" id="user-input" placeholder="SEARCH FOR A GIF..." />
+        <button id="search-btn">SEARCH</button>
+        <button id="clear-btn">CLEAR</button>
+      </section>
+      <div id="results-container" class="gif-grid"></div>
+    </main>
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p>
+          Created by Naomi Hernandez|
+          <a
+            href="https://github.com/NAH31810/giphy-search-engine"
+            target="_blank"
+            >GitHub</a
+          >
+          |
+          <a href="https://giphy.com" target="_blank">Powered by GIPHY</a>
+        </p>
+        <a href="#top" class="back-to-top">Back to Top</a>
+      </div>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
