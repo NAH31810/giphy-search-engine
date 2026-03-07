@@ -22,3 +22,28 @@ $title-font: "Bitcount Prop Double Ink", system-ui;
      background-attachment: fixed; 
       overflow-x: hidden; 
 }
+/* header styles */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 40px 20px;
+    background: transparent;
+    color: white;
+    text-align:center;
+H1 {
+    font-family: $title-font;
+    font-size: 6rem; // Adjust font size for better visibility
+    color: $accent-color;
+    letter-spacing: 8px; // Adjust letter spacing for better readability*/
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    text-shadow: // * Add multiple layers of shadow for a glowing Neon 3D effect*/
+    0 0 10px rgba(0, 255, 204, 0.8),
+    0 0 20px rgba(0, 255, 204, 0.5),
+    4px 4px 0px rgba(0,0,0,0.2); // Add a subtle shadow for depth*/
+
+
+}
