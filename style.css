@@ -31,7 +31,7 @@ body {
   color: white;
   text-align: center;
 }
-.header-container H1 {
+.header-container h1 {
   font-family: "Bitcount Prop Double Ink", system-ui;
   font-size: 6rem; /*Adjust font size for better visibility*/
   color: #00ffcc;
@@ -39,16 +39,16 @@ body {
   text-transform: uppercase;
   margin-bottom: 30px;
   text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.5), 4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
-  /* bobbing and glowing animation */
-  animation: float-and-glow 4s infinite ease-in-out;
+  animation: float-and-glow 4s infinite ease-in-out; /* bobbing and glowing animation */
 }
 @media (max-width: 320px) {
-  .header-container H1 {
+  .header-container h1 {
     font-size: 3rem;
     letter-spacing: 4px;
   }
 }
 
+/*flexbox layout*/
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -80,7 +80,7 @@ body {
 @media (max-width: 320px) {
   .search-area {
     flex-direction: column;
-    width: 100%;
+    width: 95%;
   }
 }
 .search-area input {
@@ -90,19 +90,116 @@ body {
   font-weight: 800; /* Make text bolder for better readability */
   color: #2c3e50;
   background-color: rgba(255, 218, 185, 0.9); /* Light peach background with some transparency */
-  border-radius: 4px 0 0 4px;
-  max-width: 80%;
+  border: 2px solid #f2c199; /* Soft peach border for a cohesive look */
+  border-radius: 50px;
+  outline: none;
+  /* The "stand out" effect  */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); /* Outer glow */
+  inset: 0 0 5px rgba(255, 218, 185, 0.5); /* Inner glow */
+  backdrop-filter: blur(4px); /* Add a subtle blur for a glass effect */
+  transition: all 0.3s ease; /* Smooth transition for focus and hover effects */
+  /*search icon*/
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%238b5e3c' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 18px center;
+}
+.search-area input::-moz-placeholder {
+  color: rgba(139, 94, 60, 0.7); /* Custom color for "SEARCH FOR A GIF..." */
+  font-weight: 600;
+}
+.search-area input::placeholder {
+  color: rgba(139, 94, 60, 0.7); /* Custom color for "SEARCH FOR A GIF..." */
+  font-weight: 600;
+}
+.search-area input:focus {
+  width: 400px; /* Expand width on focus for better usability */
+  background-color: FFDAB9; /* Slightly lighter peach background on focus */
+  box-shadow: 0 0 20px #00ffcc; /* Stronger glow on focus */
+  border-color: #00ffcc; /* Change border color to accent color on focus */
+}
+@media (max-width: 320px) {
+  .search-area input {
+    width: 95%; /* leaves some space on the sides */
+    margin: 0 auto;
+    max-width: 280px; /* Limit max width on mobile */
+  }
+  .search-area input:focus {
+    width: 95%;
+    max-width: 290px; /* Ensure it doesn't exceed the container width on mobile */
+  }
 }
 .search-area button {
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 12px 25px; /* better match input padding */
   border: none;
   background-color: #00ffcc;
-  color: white;
+  color: #333;
+  font-weight: 800;
   cursor: pointer;
-  border-radius: 0 4px 4px 0;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 .search-area button:hover {
-  background-color: rgb(51, 255, 214.2);
-  text-shadow: 0 0 10px #00ffcc;
-}/*# sourceMappingURL=style.css.map */
+  transform: scale(1.05); /* Slightly enlarge on hover for a "pop" effect */
+  filter: brightness(1.1); /* Brighten the button on hover for more visual feedback */
+  box-shadow: 0 0 15px #00ffcc;
+}
+.search-area button:active {
+  transform: scale(0.95); /* Slightly shrink on click for a "press" effect */
+}
+.search-area #clear-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+.search-area #clear-btn:hover {
+  background-color: #ff4d4d;
+  box-shadow: 0 0px 15px #ff6b6b; /* Add a red glow on hover for the clear button */
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+.gif-grid img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  cursor: pointer;
+}
+.gif-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  padding: 80px 20 px;
+  color: white;
+  background: transparent;
+  margin-top: 50px;
+}
+footer P {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+footer P a {
+  color: #00ffcc;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+footer P a:hover {
+  border-bottom: 1px solid #00ffcc;
+}
+
+/* animations*//*# sourceMappingURL=style.css.map */

@@ -1,4 +1,6 @@
-html{scroll-behavior: smooth;}
+html {
+  scroll-behavior: smooth;
+}
 
 /* variables */
 $primary-color: #333;
@@ -9,30 +11,31 @@ $title-font: "Bitcount Prop Double Ink", system-ui;
 
 /* reset and body styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- body {
-    margin:0;
-    padding:0;
-    font-family: Arial, sans-serif;
-    background: $ocean-gradient;
-    min-height: 100vh;
-     background-attachment: fixed; 
-      overflow-x: hidden; 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: $ocean-gradient;
+  min-height: 100vh;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 /* header styles */
 .header-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px 40px 20px;
-    background: transparent;
-    color: white;
-    text-align:center;
-H1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 40px 20px;
+  background: transparent;
+  color: white;
+  text-align: center;
+
+  h1 {
     font-family: $title-font;
     font-size: 6rem; /*Adjust font size for better visibility*/
     color: $accent-color;
@@ -41,92 +44,192 @@ H1 {
     margin-bottom: 30px;
 
     text-shadow: /* Add multiple layers of shadow for a glowing Neon 3D effect*/
-    0 0 10px rgba(0, 255, 204, 0.8),
-    0 0 20px rgba(0, 255, 204, 0.5),
-    4px 4px 0px rgba(0,0,0,0.2); /* Add a subtle shadow for depth*/
-
-    /* bobbing and glowing animation */
-    animation: float-and-glow 4s infinite ease-in-out;
+      0 0 10px rgba(0, 255, 204, 0.8),
+      0 0 20px rgba(0, 255, 204, 0.5),
+      4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
+    animation: float-and-glow 4s infinite ease-in-out; /* bobbing and glowing animation */
 
     @media (max-width: $mobile-width) {
-        font-size: 3rem; // Adjust font size for mobile
-        letter-spacing: 4px; // Adjust letter spacing for mobile
+      font-size: 3rem; // Adjust font size for mobile
+      letter-spacing: 4px; // Adjust letter spacing for mobile
     }
+  }
 }
-
-//* flexbox layout for nav and search*/
-}
-
+/*flexbox layout*/
 .nav-links ul {
-    list-style: none;
-    display: flex;
-    padding:0;
+  list-style: none;
+  display: flex;
+  padding: 0;
 
-    li{
-        margin: 0 15px;
+  li {
+    margin: 0 15px;
 
-        a {
-            text-decoration: none;
-            color: $accent-color;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
+    a {
+      text-decoration: none;
+      color: $accent-color;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
 
-            &:hover {
-                color: white;
-                text-shadow: 0 0 10px $accent-color;
-            }
-        }
+      &:hover {
+        color: white;
+        text-shadow: 0 0 10px $accent-color;
+      }
     }
+  }
 }
 /* search area styles and Gif grid */
 .search-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 10px;
 
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  input {
+    padding: 12px 15px 12px 45px; /* Adjust padding with more left-room for icon */
+    width: 305px;
+    font-size: 1.1rem; /* Increase font size for better visibility */
+    font-weight: 800; /* Make text bolder for better readability */
+    color: #2c3e50;
+
+    background-color: rgba(
+      255,
+      218,
+      185,
+      0.9
+    ); /* Light peach background with some transparency */
+    border: 2px solid #f2c199; /* Soft peach border for a cohesive look */
+    border-radius: 50px;
+    outline: none;
+    /* The "stand out" effect  */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); /* Outer glow */
+    inset: 0 0 5px rgba(255, 218, 185, 0.5); /* Inner glow */
+    backdrop-filter: blur(4px); /* Add a subtle blur for a glass effect */
+    transition: all 0.3s ease; /* Smooth transition for focus and hover effects */
+
+    /*search icon*/
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%238b5e3c' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 18px center;
+
+    &::placeholder {
+      color: rgba(
+        139,
+        94,
+        60,
+        0.7
+      ); /* Custom color for "SEARCH FOR A GIF..." */
+      font-weight: 600;
+    }
+
+    &:focus {
+      width: 400px; /* Expand width on focus for better usability */
+      background-color: FFDAB9; /* Slightly lighter peach background on focus */
+      box-shadow: 0 0 20px $accent-color; /* Stronger glow on focus */
+      border-color: $accent-color; /* Change border color to accent color on focus */
+    }
     @media (max-width: $mobile-width) {
-        flex-direction: column;
-        width:100%;
+      width: 95%; /* leaves some space on the sides */
+      margin: 0 auto;
+      max-width: 280px; /* Limit max width on mobile */
+
+      &:focus {
+        width: 95%;
+        max-width: 290px; /* Ensure it doesn't exceed the container width on mobile */
+      }
     }
+  }
 
-    input {
-        padding: 12px 15px  12px 45px; /* Adjust padding with more left-room for icon */
-        width: 305px;
-        font-size: 1.1rem; /* Increase font size for better visibility */
-        font-weight: 800; /* Make text bolder for better readability */
-        color: #2c3e50;
+  button {
+    padding: 12px 25px; /* better match input padding */
+    border: none;
+    background-color: $accent-color;
+    color: $primary-color;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 
-        background-color: rgba(255, 218, 185, 0.9); /* Light peach background with some transparency */
-        border: 2px solid #f2c199; /* Soft peach border for a cohesive look */
-        border-radius: 50px;
-        outline:none
-            /* The "stand out" effect  */
-            box-shadow: 0  8px 32px rgba(31, 38, 135, 0.2), /* Outer glow */
-                        inset 0 0 5px rgba(255, 218, 185, 0.5); /* Inner glow */
-                        backdrop-filter: blur(4px); /* Add a subtle blur for a glass effect */
-                        transition: all 0.3s ease; /* Smooth transition for focus and hover effects */
-
-                        /*search icon*/
-                         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%238b5e3c' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
-                         background-repeat: no-repeat;
-                         background-position: 18px center;
+    &:hover {
+      transform: scale(1.05); /* Slightly enlarge on hover for a "pop" effect */
+      filter: brightness(
+        1.1
+      ); /* Brighten the button on hover for more visual feedback */
+      box-shadow: 0 0 15px $accent-color;
     }
-
-    button {
-        padding: 10px 20px;
-        font-size: 1rem;
-        border: none;
-        background-color: $accent-color;
-        color: white;
-        cursor: pointer;
-        border-radius: 0 4px 4px 0;
-
-        &:hover {
-            background-color: lighten($accent-color, 10%);
-            text-shadow: 0 0 10px $accent-color;
-        }
+    &:active {
+      transform: scale(
+        0.95
+      ); /* Slightly shrink on click for a "press" effect */
     }
+  }
+  #clear-btn {
+    background-color: #ff6b6b;
+    color: white;
+
+    &:hover {
+      background-color: #ff4d4d;
+      box-shadow: 0 0px 15px #ff6b6b; /* Add a red glow on hover for the clear button */
+    }
+  }
 }
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+  }
+}
+
+/*footer*/
+
+footer {
+  text-align: center;
+  padding: 80px 20 px;
+  color: white;
+  background: transparent;
+  margin-top: 50px;
+
+  P {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.9;
+
+    a {
+      color: $accent-color;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-bottom: 1px solid $accent-color;
+      }
+    }
+  }
+}
+
+/* animations*/
