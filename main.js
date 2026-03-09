@@ -36,3 +36,12 @@ async function getGifs() {
   }
 }
 // Event Listeners
+searchBtn.addEventListener("click", getGifs);
+
+searchInput.addEventListener("keyup", (e) => {
+  if (e.Key === "Enter") getGifs();
+});
+clearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  gifcontainer.innerHTML = "";
+});
