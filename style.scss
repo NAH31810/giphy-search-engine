@@ -96,7 +96,7 @@ body {
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    width: 95%;
+    width: 75%;
     display: flex;
     align-items: center;
     padding: 0 20 px;
@@ -146,12 +146,12 @@ body {
       border-color: $accent-color; /* Change border color to accent color on focus */
     }
     @media (max-width: $mobile-width) {
-      width: 90%; /* leaves some space on the sides */
+      width: 95%; /* leaves some space on the sides for buttons on mobile */
       max-width: 280px;
-      font-size: 16px; /* Limit max width on mobile */
+      font-size: 12px; /* Limit max width on mobile */
 
       &:focus {
-        width: 95%;
+        width: 85%;
         max-width: 280px; /* Ensure it doesn't exceed the container width on mobile */
       }
     }

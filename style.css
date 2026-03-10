@@ -140,9 +140,10 @@ body {
 }
 @media (max-width: 320px) {
   .search-area input {
-    width: 90%; /* leaves some space on the sides */
-    max-width: 280px;
-    font-size: 16px; /* Limit max width on mobile */
+    width: 95%; /* leaves some space on the sides  */
+    max-width: 280px; /* Limit max width on mobile */
+    font-size: 12px;
+    margin: 0 auto;
   }
   .search-area input:focus {
     width: 95%;
@@ -173,6 +174,7 @@ body {
 @media (max-width: 320px) {
   .search-area button {
     width: 280px;
+    font-size: 12px;
   }
 }
 .search-area #clear-btn {
@@ -186,6 +188,7 @@ body {
 @media (max-width: 320px) {
   .search-area #clear-btn {
     width: 280px;
+    font-size: 12px;
   }
 }
 
