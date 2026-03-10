@@ -4,13 +4,13 @@ A vibrant, interactive GIF search engine powered by the GIPHY API. This project 
 
 ## 🚀 Technologies Used
 
-- **HTML & SCSS:** For semantic structure and advanced ocean-themed styling.
+- **.HTML, .CSS & .SCSS:** For semantic structure and advanced ocean-themed styling.
 - **JavaScript (ES6+):** For asynchronous API fetching and DOM manipulation.
 - **Google Fonts:** Featuring "Bitcount Prop Double Ink" for a unique aesthetic.
 
   ## ✨ Features
 
-  Real-time Search: Fetches high-quality GIFs using the GIPHY API.
+  Real-time Search: Fetches high-quality GIFs using the GIPHY API.fix
 
 Interactive UI: Includes a "pulsing glow" neon title and glassmorphism effects.
 
