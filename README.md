@@ -10,7 +10,7 @@ A vibrant, interactive GIF search engine powered by the GIPHY API. This project 
 
   ## ✨ Features
 
-  Real-time Search: Fetches high-quality GIFs using the GIPHY API.fix
+Real-time Search: Fetches high-quality GIFs using the GIPHY API.fix
 
 Interactive UI: Includes a "pulsing glow" neon title and glassmorphism effects.
 
@@ -40,6 +40,6 @@ Copy-to-Clipboard: Add functionality to click a GIF and automatically copy its U
 
 - "As a user, I want to find GIFs that match my mood by entering keywords into the search bar."
 - "As a user, I want to see the search results in an organized grid so that I can quickly scan through the GIF options.
-- "As a usesr who will search for Gifs on my phone, I want the layout to adapt to my phons screen so that the GIFs are easy to view."
+- "As a user who will search for Gifs on my phone, I want the layout to adapt to my phons screen so that the GIFs are easy to view."
 
 ![My Wireframe](./wireframe-desktop.png)
