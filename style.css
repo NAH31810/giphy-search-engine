@@ -41,12 +41,15 @@ body {
 }
 .header-container h1 {
   font-family: "Bitcount Prop Double Ink", system-ui;
-  font-size: 4rem;
+  font-size: 6rem;
   color: #00ffcc;
   letter-spacing: 8px; /*Adjust letter spacing for better readability*/
   text-transform: uppercase;
   margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.5), 4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
+  text-shadow:
+    0 0 10px rgba(0, 255, 204, 0.8),
+    0 0 20px rgba(0, 255, 204, 0.5),
+    4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
   animation: float-and-glow 4s infinite ease-in-out; /* bobbing and glowing animation */
 }
 @media (max-width: 320px) {
@@ -102,7 +105,12 @@ body {
   font-size: 1.1rem; /* Increase font size for better visibility */
   font-weight: 800; /* Make text bolder for better readability */
   color: #2c3e50;
-  background-color: rgba(255, 218, 185, 0.9); /* Light peach background with some transparency */
+  background-color: rgba(
+    255,
+    218,
+    185,
+    0.9
+  ); /* Light peach background with some transparency */
   border: 2px solid #f2c199; /* Soft peach border for a cohesive look */
   border-radius: 50px;
   outline: none;
@@ -154,7 +162,9 @@ body {
 }
 .search-area button:hover {
   transform: scale(1.05); /* Slightly enlarge on hover for a "pop" effect */
-  filter: brightness(1.1); /* Brighten the button on hover for more visual feedback */
+  filter: brightness(
+    1.1
+  ); /* Brighten the button on hover for more visual feedback */
   box-shadow: 0 0 15px #00ffcc;
 }
 .search-area button:active {
@@ -189,7 +199,7 @@ body {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s ease; /* Smooth zoom effect on hover */
   cursor: pointer;
@@ -294,13 +304,18 @@ footer P a:hover {
   }
 }
 @keyframes float-and-glow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
-    text-shadow: 0 0 15px #00ffcc, 0 0 30px rgba(0, 225, 204, 0.3);
+    text-shadow:
+      0 0 15px #00ffcc,
+      0 0 30px rgba(0, 225, 204, 0.3);
   }
   50% {
     transform: translateY(-15px);
-    text-shadow: 0 0 30px #00ffcc, 0 0 60px rgba(0, 255, 204, 0.6);
+    text-shadow:
+      0 0 30px #00ffcc,
+      0 0 60px rgba(0, 255, 204, 0.6);
     filter: brightness(1.2);
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
