@@ -27,12 +27,13 @@ body {
 /* header styles */
 .header-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px 60px;
+  padding: 80px 20px 40px 20px;
   background: transparent;
   color: white;
+  text-align: center;
   /*stack header on mobile*/
   @media (max-width: $mobile-width) {
     flex-direction: column;
@@ -56,7 +57,6 @@ body {
 
     @media (max-width: $mobile-width) {
       font-size: 2.5rem;
-      flex-direction: column;
       padding: 40px 20px;
       margin-bottom: 20px;
       letter-spacing: 4px;
@@ -104,7 +104,7 @@ body {
 
   input {
     padding: 12px 15px 12px 45px; /* Adjust padding with more left-room for icon */
-    width: 305px;
+    width: 350px;
     font-size: 1.1rem; /* Increase font size for better visibility */
     font-weight: 800; /* Make text bolder for better readability */
     color: #2c3e50;
