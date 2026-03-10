@@ -1,10 +1,10 @@
-## 🌊 GIPHY Ocean Search Created By Naomi Hernandez#🪼
+## 🌊 GIPHY Ocean Search Created By Naomi Hernandez🪼
 
 A vibrant, interactive GIF search engine powered by the GIPHY API. This project features a deep-sea aesthetic with floating bubble animations and a glowing, responsive UI.
 
 ## 🚀 Technologies Used
 
-- **HTML5 & SCSS:** For semantic structure and advanced ocean-themed styling.
+- **HTML & SCSS:** For semantic structure and advanced ocean-themed styling.
 - **JavaScript (ES6+):** For asynchronous API fetching and DOM manipulation.
 - **Google Fonts:** Featuring "Bitcount Prop Double Ink" for a unique aesthetic.
 

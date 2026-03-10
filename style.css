@@ -38,10 +38,7 @@ body {
   letter-spacing: 8px; /*Adjust letter spacing for better readability*/
   text-transform: uppercase;
   margin-bottom: 30px;
-  text-shadow:
-    0 0 10px rgba(0, 255, 204, 0.8),
-    0 0 20px rgba(0, 255, 204, 0.5),
-    4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.5), 4px 4px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth*/
   animation: float-and-glow 4s infinite ease-in-out; /* bobbing and glowing animation */
 }
 @media (max-width: 320px) {
@@ -92,12 +89,7 @@ body {
   font-size: 1.1rem; /* Increase font size for better visibility */
   font-weight: 800; /* Make text bolder for better readability */
   color: #2c3e50;
-  background-color: rgba(
-    255,
-    218,
-    185,
-    0.9
-  ); /* Light peach background with some transparency */
+  background-color: rgba(255, 218, 185, 0.9); /* Light peach background with some transparency */
   border: 2px solid #f2c199; /* Soft peach border for a cohesive look */
   border-radius: 50px;
   outline: none;
@@ -149,9 +141,7 @@ body {
 }
 .search-area button:hover {
   transform: scale(1.05); /* Slightly enlarge on hover for a "pop" effect */
-  filter: brightness(
-    1.1
-  ); /* Brighten the button on hover for more visual feedback */
+  filter: brightness(1.1); /* Brighten the button on hover for more visual feedback */
   box-shadow: 0 0 15px #00ffcc;
 }
 .search-area button:active {
@@ -176,7 +166,7 @@ body {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s ease; /* Smooth zoom effect on hover */
   cursor: pointer;
@@ -212,78 +202,4 @@ footer P a:hover {
   border-bottom: 1px solid #00ffcc;
 }
 
-/* animations*/
-.bubbles {
-  position: fixed;
-  bottom: -100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  z-index: -1;
-}
-
-.bubble {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  animation: float 10s infinite ease-in;
-}
-
-.bubble:nth-child(1) {
-  width: 80px;
-  height: 80px;
-  animation-duration: 8s;
-}
-.bubble:nth-child(2) {
-  width: 40px;
-  height: 40px;
-  animation-duration: 12s;
-  animation-delay: 2s;
-}
-.bubble:nth-child(3) {
-  width: 20px;
-  height: 20px;
-  animation-duration: 7s;
-  animation-delay: 4s;
-}
-.bubble:nth-child(4) {
-  width: 60px;
-  height: 60px;
-  animation-duration: 15s;
-}
-.bubble:nth-child(5) {
-  width: 30px;
-  height: 30px;
-  animation-duration: 9s;
-  animation-delay: 1s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh);
-    opacity: 0;
-  }
-}
-
-@keyframes float-and-glow {
-  0%,
-  100% {
-    transform: translateY(0);
-    text-shadow:
-      0 0 15px rgba(0, 255, 204, 0.8),
-      0 0 30px rgba(0, 255, 204, 0.3);
-  }
-  50% {
-    transform: translateY(-15px); /* Moves up slightly like it's floating */
-    text-shadow:
-      0 0 30px rgba(0, 255, 204, 0.8),
-      0 0 60px rgba(0, 255, 204, 0.6);
-    filter: brightness(1.2);
-  }
-}
+/* animations*//*# sourceMappingURL=style.css.map */

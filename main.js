@@ -23,11 +23,10 @@ async function getGifs() {
     gifcontainer.innerHTML = "";
 
     // Loop and Diaplay
-
-    ConstantSourceNode.data.forEach((gif) => {
+    content.data.forEach((gif) => {
       let img = document.createElement("img");
       img.src = gif.images.fixed_height.url;
-      img.alt = gif.title || "Giphy Result"; //Fallback if title is missing
+      img.alt = gif.title;
       img.classList.add("gif-item");
       gifcontainer.appendChild(img);
     });
@@ -39,7 +38,7 @@ async function getGifs() {
 searchBtn.addEventListener("click", getGifs);
 
 searchInput.addEventListener("keyup", (e) => {
-  if (e.Key === "Enter") getGifs();
+  if (e.key === "Enter") getGifs();
 });
 clearBtn.addEventListener("click", () => {
   searchInput.value = "";
