@@ -23,17 +23,24 @@ body {
 /* header styles */
 .header-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 80px 20px 40px 20px;
+  padding: 20px 60px;
   background: transparent;
   color: white;
-  text-align: center;
+  /*stack header on mobile*/
+}
+@media (max-width: 320px) {
+  .header-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
 }
 .header-container h1 {
   font-family: "Bitcount Prop Double Ink", system-ui;
-  font-size: 6rem; /*Adjust font size for better visibility*/
+  font-size: 4rem;
   color: #00ffcc;
   letter-spacing: 8px; /*Adjust letter spacing for better readability*/
   text-transform: uppercase;
@@ -43,7 +50,10 @@ body {
 }
 @media (max-width: 320px) {
   .header-container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    flex-direction: column;
+    padding: 40px 20px;
+    margin-bottom: 20px;
     letter-spacing: 4px;
   }
 }
@@ -81,6 +91,9 @@ body {
   .search-area {
     flex-direction: column;
     width: 95%;
+    display: flex;
+    align-items: center;
+    padding: 0 20 px;
   }
 }
 .search-area input {
@@ -119,13 +132,13 @@ body {
 }
 @media (max-width: 320px) {
   .search-area input {
-    width: 95%; /* leaves some space on the sides */
-    margin: 0 auto;
-    max-width: 280px; /* Limit max width on mobile */
+    width: 90%; /* leaves some space on the sides */
+    max-width: 280px;
+    font-size: 16px; /* Limit max width on mobile */
   }
   .search-area input:focus {
     width: 95%;
-    max-width: 290px; /* Ensure it doesn't exceed the container width on mobile */
+    max-width: 280px; /* Ensure it doesn't exceed the container width on mobile */
   }
 }
 .search-area button {
@@ -147,6 +160,11 @@ body {
 .search-area button:active {
   transform: scale(0.95); /* Slightly shrink on click for a "press" effect */
 }
+@media (max-width: 320px) {
+  .search-area button {
+    width: 280px;
+  }
+}
 .search-area #clear-btn {
   background-color: #ff6b6b;
   color: white;
@@ -154,6 +172,11 @@ body {
 .search-area #clear-btn:hover {
   background-color: #ff4d4d;
   box-shadow: 0 0px 15px #ff6b6b; /* Add a red glow on hover for the clear button */
+}
+@media (max-width: 320px) {
+  .search-area #clear-btn {
+    width: 280px;
+  }
 }
 
 .gif-grid {
@@ -175,6 +198,12 @@ body {
   transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+@media (max-width: 320px) {
+  .gif-grid img {
+    width: 90%; /* Stacks in one column */
+    height: auto;
+  }
 }
 
 /*footer*/

@@ -27,17 +27,22 @@ body {
 /* header styles */
 .header-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 80px 20px 40px 20px;
+  padding: 20px 60px;
   background: transparent;
   color: white;
-  text-align: center;
+  /*stack header on mobile*/
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
 
   h1 {
     font-family: $title-font;
-    font-size: 6rem; /*Adjust font size for better visibility*/
+    font-size: 4rem;
     color: $accent-color;
     letter-spacing: 8px; /*Adjust letter spacing for better readability*/
     text-transform: uppercase;
@@ -50,8 +55,11 @@ body {
     animation: float-and-glow 4s infinite ease-in-out; /* bobbing and glowing animation */
 
     @media (max-width: $mobile-width) {
-      font-size: 3rem; // Adjust font size for mobile
-      letter-spacing: 4px; // Adjust letter spacing for mobile
+      font-size: 2.5rem;
+      flex-direction: column;
+      padding: 40px 20px;
+      margin-bottom: 20px;
+      letter-spacing: 4px;
     }
   }
 }
@@ -89,6 +97,9 @@ body {
   @media (max-width: $mobile-width) {
     flex-direction: column;
     width: 95%;
+    display: flex;
+    align-items: center;
+    padding: 0 20 px;
   }
 
   input {
@@ -135,13 +146,13 @@ body {
       border-color: $accent-color; /* Change border color to accent color on focus */
     }
     @media (max-width: $mobile-width) {
-      width: 95%; /* leaves some space on the sides */
-      margin: 0 auto;
-      max-width: 280px; /* Limit max width on mobile */
+      width: 90%; /* leaves some space on the sides */
+      max-width: 280px;
+      font-size: 16px; /* Limit max width on mobile */
 
       &:focus {
         width: 95%;
-        max-width: 290px; /* Ensure it doesn't exceed the container width on mobile */
+        max-width: 280px; /* Ensure it doesn't exceed the container width on mobile */
       }
     }
   }
@@ -169,6 +180,9 @@ body {
         0.95
       ); /* Slightly shrink on click for a "press" effect */
     }
+    @media (max-width: $mobile-width) {
+      width: 280px;
+    }
   }
   #clear-btn {
     background-color: #ff6b6b;
@@ -177,6 +191,9 @@ body {
     &:hover {
       background-color: #ff4d4d;
       box-shadow: 0 0px 15px #ff6b6b; /* Add a red glow on hover for the clear button */
+    }
+    @media (max-width: $mobile-width) {
+      width: 280px;
     }
   }
 }
@@ -199,6 +216,10 @@ body {
       transform: scale(1.1);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       z-index: 1;
+    }
+    @media (max-width: $mobile-width) {
+      width: 90%; /* Stacks in one column */
+      height: auto;
     }
   }
 }
