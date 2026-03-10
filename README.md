@@ -38,4 +38,8 @@ Copy-to-Clipboard: Add functionality to click a GIF and automatically copy its U
 
 ## 📝 User Stories
 
+- "As a user, I want to find GIFs that match my mood by entering keywords into the search bar."
+- "As a user, I want to see the search results in an organized grid so that I can quickly scan through the GIF options.
+- "As a usesr who will search for Gifs on my phone, I want the layout to adapt to my phons screen so that the GIFs are easy to view."
+
 ![My Wireframe](./wireframe-desktop.png)
